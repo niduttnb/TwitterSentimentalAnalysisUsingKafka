@@ -17,7 +17,7 @@ Steps:
 1) Start the mongoDB replica set server with atleast 2 nodes- one primary and one seconday
 2) Run the Kafka Server
 3) Run the following python code in this order:
-  (i) producer.py : This will start streaming tweets from twitter on Biden and produce it in Partition 0 of Kafka Topic - 'Twitter'
-  (ii) producer2.py : This will start streaming tweets from twitter on Trump and produce it in Partition 1 of Kafka Topic - 'Twitter'
-  (iii) consumer.py : Here the consumer will listen to inserts in both the partitions and will extract the entire tweet (extended_tweet) if the tweet size>140 characters. Later the consumer will push the tweet  along with the label -'B' or 'T' to indicate who is the tweet about to a MongoDB collection
-  (iv) StreanMongoDB.ipyn: This will create a change Stream that will listen to all the new documents(tweets) being created in the collection. Then it will perform sentimental analysis on each tweet using Flair(DistilledBERT) and then see is the tweet in favor of Trump, Biden or is neutral. Later on it will plot a pie chart to depict the result with each incoming tweet
+  i) producer.py : This will start streaming tweets from twitter on Biden and produce it in Partition 0 of Kafka Topic - 'Twitter'
+  ii) producer2.py : This will start streaming tweets from twitter on Trump and produce it in Partition 1 of Kafka Topic - 'Twitter'
+  iii) consumer.py : Here the consumer will listen to inserts in both the partitions and will extract the entire tweet (extended_tweet) if the tweet size>140 characters. Later the consumer will push the tweet  along with the label -'B' or 'T' to indicate who is the tweet about to a MongoDB collection
+  iv) StreanMongoDB.ipyn: This will create a change Stream that will listen to all the new documents(tweets) being created in the collection. Then it will perform sentimental analysis on each tweet using Flair(DistilledBERT) and then see is the tweet in favor of Trump, Biden or is neutral. Later on it will plot a pie chart to depict the result with each incoming tweet
