@@ -4,10 +4,11 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 from kafka import KafkaProducer
 
-consumer_key    = '8yFBpEhf7MiMktk2GNvthMNeM'
-consumer_secret = 'VcYm394SGJIom1g0afKUuRQm8pR3kQqj0VRul7MLXkgXhu4v62'
-access_token    = '2716416561-CxTXcX6a2J12WMbnUzRYCHpzM51QrWmhlEpvCTy'
-access_token_secret   = 'WTPxMY3PijpM9sCZFp7VK3Pw9euJ0uDISlHaztfFI8cnv'
+#Place your keys here
+consumer_key    = ''
+consumer_secret = ''
+access_token    = ''
+access_token_secret   = ''
 
 
 producer = KafkaProducer(
@@ -36,8 +37,8 @@ class Producer(StreamListener):
         print(error)
 
 twitter_stream = Stream(auth, Producer(producer))
-twitter_stream.filter(track=["Biden"])
-
+twitter_stream.filter(track=["Biden"])  #Stream tweets on Biden
+ 
 
 
 
