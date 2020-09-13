@@ -1,6 +1,6 @@
 # TwitterSentimentalAnalysisUsingKafka
 I used Kafka to stream twitter data and see who is leading the Twitter Battle between Trump and Biden on Twitter using Sentimental Analysis
-
+![Alt text](C:\Users\nidut\OneDrive\Desktop\f5.png?raw=true "flowchart")
 Tools needed:
   1) Apache/Confluent Kafka
   2) Python
